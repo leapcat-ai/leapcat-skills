@@ -1,0 +1,14 @@
+{
+  "name": "leapcat-skills",
+  "version": "0.1.0",
+  "description": "AI agent skills for Leapcat — stock trading, IPO, wallet, KYC, and market data",
+  "skills": [
+    { "name": "leapcat-auth", "path": "./skills/leapcat-auth", "description": "Login, logout, token management" },
+    { "name": "leapcat-kyc", "path": "./skills/leapcat-kyc", "description": "KYC identity verification" },
+    { "name": "leapcat-ipo", "path": "./skills/leapcat-ipo", "description": "IPO subscription management" },
+    { "name": "leapcat-trading", "path": "./skills/leapcat-trading", "description": "Stock trading orders" },
+    { "name": "leapcat-wallet", "path": "./skills/leapcat-wallet", "description": "Wallet and funds management" },
+    { "name": "leapcat-portfolio", "path": "./skills/leapcat-portfolio", "description": "Portfolio overview" },
+    { "name": "leapcat-market", "path": "./skills/leapcat-market", "description": "Market data and quotes" }
+  ]
+}

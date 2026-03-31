@@ -1,3 +1,8 @@
+---
+name: leapcat-trading
+description: Place, monitor, and cancel stock trading orders on Leapcat via the leapcat CLI.
+---
+
 # LeapCat Stock Trading Skill
 
 Place, monitor, and cancel stock trading orders using the leapcat.

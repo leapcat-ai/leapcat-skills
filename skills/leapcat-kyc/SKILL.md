@@ -1,3 +1,8 @@
+---
+name: leapcat-kyc
+description: Guide users through KYC verification on Leapcat. Covers document upload, personal information submission, agreements, and status polling via the leapcat CLI.
+---
+
 # LeapCat KYC Verification Skill
 
 Guide a user through the full Know Your Customer (KYC) verification process using the leapcat. Covers document upload, personal information submission, agreements, and status polling.

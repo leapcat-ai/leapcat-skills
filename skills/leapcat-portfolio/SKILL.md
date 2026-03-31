@@ -1,3 +1,8 @@
+---
+name: leapcat-portfolio
+description: View portfolio overview and stock positions on Leapcat via the leapcat CLI.
+---
+
 # LeapCat Portfolio Skill
 
 View portfolio overview and stock positions using the leapcat. These are read-only commands for checking the user's current holdings and performance.

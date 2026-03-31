@@ -1,3 +1,8 @@
+---
+name: leapcat-market
+description: Access real-time stock quotes, K-line charts, market indices, stock search, and platform configuration on Leapcat via the leapcat CLI.
+---
+
 # LeapCat Market Data Skill
 
 Access market data, stock quotes, K-line charts, indices, and platform configuration. All commands in this skill are **public and do not require authentication**.

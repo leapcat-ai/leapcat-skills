@@ -1,3 +1,8 @@
+---
+name: leapcat-wallet
+description: Manage wallet balances, deposits, withdrawals, debt status, and fund activity on Leapcat via the leapcat CLI.
+---
+
 # LeapCat Wallet Management Skill
 
 Manage wallet balances, deposits, withdrawals, debt status, and fund activity using the leapcat.

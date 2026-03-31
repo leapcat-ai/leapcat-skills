@@ -1,3 +1,8 @@
+---
+name: leapcat-ipo
+description: Browse, estimate, subscribe to, and manage IPO subscriptions on Leapcat via the leapcat CLI.
+---
+
 # LeapCat IPO Subscription Skill
 
 Browse, estimate, subscribe to, and manage IPO (Initial Public Offering) project subscriptions using the leapcat.

@@ -1,3 +1,8 @@
+---
+name: leapcat-auth
+description: Manage user authentication for Leapcat. Handles login, logout, session management, token refresh, re-authentication, and trade password operations via the leapcat CLI.
+---
+
 # LeapCat Authentication Skill
 
 Manage user authentication for the leapcat. Handles login, logout, session management, token refresh, re-authentication, and trade password operations.

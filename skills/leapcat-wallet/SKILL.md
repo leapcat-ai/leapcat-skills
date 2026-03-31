@@ -9,9 +9,9 @@ Manage wallet balances, deposits, withdrawals, debt status, and fund activity us
 
 ## Prerequisites
 
-- `leapcat` must be installed and in PATH
-- User must be authenticated — run `leapcat auth login --email <email>` first
-- For withdrawals: a Turnkey session is required — run `leapcat auth reauth --json` first
+- Node.js 18+ is required (commands use `npx leapcat@latest` which auto-downloads the CLI)
+- User must be authenticated — run `npx leapcat@latest auth login --email <email>` first
+- For withdrawals: a Turnkey session is required — run `npx leapcat@latest auth reauth --json` first
 - For withdrawals: trade password must be set
 
 ## Commands
@@ -21,7 +21,7 @@ Manage wallet balances, deposits, withdrawals, debt status, and fund activity us
 Check the user's current wallet balance.
 
 ```bash
-leapcat wallet balance --json
+npx leapcat@latest wallet balance --json
 ```
 
 ### wallet deposit-address
@@ -29,7 +29,7 @@ leapcat wallet balance --json
 Get the deposit address for receiving funds.
 
 ```bash
-leapcat wallet deposit-address --json
+npx leapcat@latest wallet deposit-address --json
 ```
 
 ### wallet deposits
@@ -37,7 +37,7 @@ leapcat wallet deposit-address --json
 List all deposit transactions.
 
 ```bash
-leapcat wallet deposits --json
+npx leapcat@latest wallet deposits --json
 ```
 
 ### wallet deposit
@@ -45,7 +45,7 @@ leapcat wallet deposits --json
 Get details of a specific deposit.
 
 ```bash
-leapcat wallet deposit --id <deposit-id> --json
+npx leapcat@latest wallet deposit --id <deposit-id> --json
 ```
 
 **Parameters:**
@@ -56,7 +56,7 @@ leapcat wallet deposit --id <deposit-id> --json
 Initiate a withdrawal. Requires an elevated session (`auth reauth`) and trade password.
 
 ```bash
-leapcat wallet withdraw --amount <amount> --address <address> --json
+npx leapcat@latest wallet withdraw --amount <amount> --address <address> --json
 ```
 
 **Parameters:**
@@ -68,7 +68,7 @@ leapcat wallet withdraw --amount <amount> --address <address> --json
 List all withdrawal transactions.
 
 ```bash
-leapcat wallet withdrawals --json
+npx leapcat@latest wallet withdrawals --json
 ```
 
 ### wallet debt-status
@@ -76,7 +76,7 @@ leapcat wallet withdrawals --json
 Check if the user has any outstanding debt or margin obligations.
 
 ```bash
-leapcat wallet debt-status --json
+npx leapcat@latest wallet debt-status --json
 ```
 
 ### wallet fund-activities
@@ -84,7 +84,7 @@ leapcat wallet debt-status --json
 View a history of all fund activities (deposits, withdrawals, trades, fees, etc.).
 
 ```bash
-leapcat wallet fund-activities --json
+npx leapcat@latest wallet fund-activities --json
 ```
 
 ## Workflow
@@ -92,7 +92,7 @@ leapcat wallet fund-activities --json
 ### Checking Balance
 
 ```bash
-leapcat wallet balance --json
+npx leapcat@latest wallet balance --json
 ```
 
 ### Depositing Funds
@@ -103,14 +103,14 @@ leapcat wallet balance --json
 
 ### Withdrawing Funds
 
-1. **Re-authenticate** — Run `leapcat auth reauth --json` to elevate the session (Turnkey session).
+1. **Re-authenticate** — Run `npx leapcat@latest auth reauth --json` to elevate the session (Turnkey session).
 2. **Initiate withdrawal** — Run `wallet withdraw --amount <amount> --address <address> --json`. The user will be prompted for their trade password.
 3. **Monitor withdrawal** — Run `wallet withdrawals --json` to track the withdrawal status.
 
 ### Reviewing Activity
 
 ```bash
-leapcat wallet fund-activities --json
+npx leapcat@latest wallet fund-activities --json
 ```
 
 ## Error Handling

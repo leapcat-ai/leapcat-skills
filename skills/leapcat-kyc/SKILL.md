@@ -9,8 +9,8 @@ Guide a user through the full Know Your Customer (KYC) verification process usin
 
 ## Prerequisites
 
-- `leapcat` must be installed and in PATH
-- User must be authenticated — run `leapcat auth login --email <email>` first
+- Node.js 18+ is required (commands use `npx leapcat@latest` which auto-downloads the CLI)
+- User must be authenticated — run `npx leapcat@latest auth login --email <email>` first
 - Identity document images (e.g., passport, national ID) must be available as local files
 
 ## Commands
@@ -20,7 +20,7 @@ Guide a user through the full Know Your Customer (KYC) verification process usin
 Upload an image file and receive a URL + key for use in subsequent KYC commands.
 
 ```bash
-leapcat upload --file <path-to-file> --json
+npx leapcat@latest upload --file <path-to-file> --json
 ```
 
 **Parameters:**
@@ -36,7 +36,7 @@ leapcat upload --file <path-to-file> --json
 Check the current KYC verification status.
 
 ```bash
-leapcat kyc status --json
+npx leapcat@latest kyc status --json
 ```
 
 ### kyc detail
@@ -44,7 +44,7 @@ leapcat kyc status --json
 Get detailed KYC information including submitted data and review notes.
 
 ```bash
-leapcat kyc detail --json
+npx leapcat@latest kyc detail --json
 ```
 
 ### kyc consent
@@ -52,7 +52,7 @@ leapcat kyc detail --json
 Submit user consent to begin the KYC process.
 
 ```bash
-leapcat kyc consent --json
+npx leapcat@latest kyc consent --json
 ```
 
 ### kyc documents
@@ -60,7 +60,7 @@ leapcat kyc consent --json
 Submit identity document information (type, URLs from upload).
 
 ```bash
-leapcat kyc documents --json
+npx leapcat@latest kyc documents --json
 ```
 
 **Parameters (interactive or via stdin):**
@@ -73,7 +73,7 @@ leapcat kyc documents --json
 Submit personal information (name, date of birth, address, etc.).
 
 ```bash
-leapcat kyc personal-info --json
+npx leapcat@latest kyc personal-info --json
 ```
 
 ### kyc supplementary
@@ -81,7 +81,7 @@ leapcat kyc personal-info --json
 Submit supplementary documents if requested during review.
 
 ```bash
-leapcat kyc supplementary --json
+npx leapcat@latest kyc supplementary --json
 ```
 
 ### kyc agreements
@@ -89,7 +89,7 @@ leapcat kyc supplementary --json
 Accept the required legal agreements and disclosures.
 
 ```bash
-leapcat kyc agreements --json
+npx leapcat@latest kyc agreements --json
 ```
 
 ### kyc submit
@@ -97,7 +97,7 @@ leapcat kyc agreements --json
 Submit the completed KYC application for review.
 
 ```bash
-leapcat kyc submit --json
+npx leapcat@latest kyc submit --json
 ```
 
 ## Workflow
@@ -106,8 +106,8 @@ leapcat kyc submit --json
 2. **Consent** — If status is `NOT_STARTED`, run `kyc consent --json` to begin.
 3. **Upload documents** — Upload each identity document image:
    ```bash
-   leapcat upload --file ./id-front.jpg --json
-   leapcat upload --file ./id-back.jpg --json
+   npx leapcat@latest upload --file ./id-front.jpg --json
+   npx leapcat@latest upload --file ./id-back.jpg --json
    ```
 4. **Submit document metadata** — Run `kyc documents --json` and provide the document type and uploaded URLs.
 5. **Personal information** — Run `kyc personal-info --json` and fill in user details.

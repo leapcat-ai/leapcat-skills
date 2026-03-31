@@ -9,8 +9,8 @@ Browse, estimate, subscribe to, and manage IPO (Initial Public Offering) project
 
 ## Prerequisites
 
-- `leapcat` must be installed and in PATH
-- User must be authenticated — run `leapcat auth login --email <email>` first
+- Node.js 18+ is required (commands use `npx leapcat@latest` which auto-downloads the CLI)
+- User must be authenticated — run `npx leapcat@latest auth login --email <email>` first
 - KYC must be completed and approved (`kyc status` should return `APPROVED`)
 - Trade password must be set (`auth trade-password status` should confirm it is set)
 
@@ -21,7 +21,7 @@ Browse, estimate, subscribe to, and manage IPO (Initial Public Offering) project
 List all available IPO projects.
 
 ```bash
-leapcat ipo projects --json
+npx leapcat@latest ipo projects --json
 ```
 
 ### ipo project
@@ -29,7 +29,7 @@ leapcat ipo projects --json
 Get detailed information about a specific IPO project.
 
 ```bash
-leapcat ipo project --id <project-id> --json
+npx leapcat@latest ipo project --id <project-id> --json
 ```
 
 **Parameters:**
@@ -40,7 +40,7 @@ leapcat ipo project --id <project-id> --json
 Estimate the cost of subscribing to an IPO with a given quantity.
 
 ```bash
-leapcat ipo estimate --id <project-id> --quantity <shares> --json
+npx leapcat@latest ipo estimate --id <project-id> --quantity <shares> --json
 ```
 
 **Parameters:**
@@ -52,7 +52,7 @@ leapcat ipo estimate --id <project-id> --quantity <shares> --json
 Submit an IPO subscription order.
 
 ```bash
-leapcat ipo subscribe --id <project-id> --quantity <shares> --json
+npx leapcat@latest ipo subscribe --id <project-id> --quantity <shares> --json
 ```
 
 **Parameters:**
@@ -64,7 +64,7 @@ leapcat ipo subscribe --id <project-id> --quantity <shares> --json
 Cancel a pending IPO subscription.
 
 ```bash
-leapcat ipo cancel --subscription-id <id> --json
+npx leapcat@latest ipo cancel --subscription-id <id> --json
 ```
 
 **Parameters:**
@@ -75,7 +75,7 @@ leapcat ipo cancel --subscription-id <id> --json
 List all of the user's IPO subscriptions.
 
 ```bash
-leapcat ipo subscriptions --json
+npx leapcat@latest ipo subscriptions --json
 ```
 
 ### ipo subscription
@@ -83,7 +83,7 @@ leapcat ipo subscriptions --json
 Get details of a specific IPO subscription.
 
 ```bash
-leapcat ipo subscription --subscription-id <id> --json
+npx leapcat@latest ipo subscription --subscription-id <id> --json
 ```
 
 **Parameters:**

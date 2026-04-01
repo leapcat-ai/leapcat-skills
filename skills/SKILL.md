@@ -6,7 +6,7 @@ homepage: https://leapcat.ai
 
 # Leapcat Skills
 
-A comprehensive set of 7 AI agent skills for the [Leapcat](https://leapcat.ai) platform. All commands use `npx leapcat@0.1.0` — no global install needed, just Node.js 18+.
+A comprehensive set of 7 AI agent skills for the [Leapcat](https://leapcat.ai) platform. All commands use `npx leapcat@0.1.1` — no global install needed, just Node.js 18+.
 
 ## Available Skills
 
@@ -36,23 +36,23 @@ Real-time stock quotes, K-line charts, market indices, stock search, exchange ra
 Check market data (no login needed):
 
 ```bash
-npx leapcat@0.1.0 market quote --symbol 00700.HK --json
-npx leapcat@0.1.0 market indices --json
+npx leapcat@0.1.1 market quote --symbol 00700.HK --json
+npx leapcat@0.1.1 market indices --json
 ```
 
 Login to access authenticated features:
 
 ```bash
-npx leapcat@0.1.0 auth login --email your@email.com --send-only --json
-npx leapcat@0.1.0 auth login --email your@email.com --otp-id <id> --otp-code <code> --json
+npx leapcat@0.1.1 auth login --email your@email.com --send-only --json
+npx leapcat@0.1.1 auth login --email your@email.com --otp-id <id> --otp-code <code> --json
 ```
 
 Then use any skill:
 
 ```bash
-npx leapcat@0.1.0 wallet balance --json
-npx leapcat@0.1.0 portfolio positions --json
-npx leapcat@0.1.0 ipo projects --json
+npx leapcat@0.1.1 wallet balance --json
+npx leapcat@0.1.1 portfolio positions --json
+npx leapcat@0.1.1 ipo projects --json
 ```
 
 ## Notes
@@ -60,13 +60,13 @@ npx leapcat@0.1.0 ipo projects --json
 - All commands output JSON when using the `--json` flag
 - Session tokens are stored locally at `~/.config/leapcat/tokens.json`
 - Access tokens auto-refresh; re-login only needed after 30 days of inactivity
-- For sensitive operations (withdrawals), run `npx leapcat@0.1.0 auth reauth --json` first
+- For sensitive operations (withdrawals), run `npx leapcat@0.1.1 auth reauth --json` first
 
 ## Security & Provenance
 
 - **Source code**: [github.com/leapcat-ai/leapcat-skills](https://github.com/leapcat-ai/leapcat-skills)
 - **npm package**: [npmjs.com/package/leapcat](https://www.npmjs.com/package/leapcat)
-- **Version pinned**: All commands use `npx leapcat@0.1.0` (pinned, not @latest) to prevent supply-chain drift
+- **Version pinned**: All commands use `npx leapcat@0.1.1` (pinned, not @latest) to prevent supply-chain drift
 - **Token storage**: `~/.config/leapcat/tokens.json` is created automatically after login; contains JWT access/refresh tokens, not user credentials
 - **KYC documents**: Only uploaded when the user explicitly provides file paths; the CLI does not scan or access local files automatically
 - **No env vars required**: Authentication is handled via email OTP, no API keys needed

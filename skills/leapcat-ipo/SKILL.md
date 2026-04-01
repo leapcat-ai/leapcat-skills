@@ -10,8 +10,8 @@ Browse, estimate, subscribe to, and manage IPO (Initial Public Offering) project
 
 ## Prerequisites
 
-- Node.js 18+ is required (commands use `npx leapcat@0.1.0` which auto-downloads the CLI)
-- User must be authenticated — run `npx leapcat@0.1.0 auth login --email <email>` first
+- Node.js 18+ is required (commands use `npx leapcat@0.1.1` which auto-downloads the CLI)
+- User must be authenticated — run `npx leapcat@0.1.1 auth login --email <email>` first
 - KYC must be completed and approved (`kyc status` should return `APPROVED`)
 - Trade password must be set (`auth trade-password status` should confirm it is set)
 
@@ -22,7 +22,7 @@ Browse, estimate, subscribe to, and manage IPO (Initial Public Offering) project
 List all available IPO projects.
 
 ```bash
-npx leapcat@0.1.0 ipo projects --json
+npx leapcat@0.1.1 ipo projects --json
 ```
 
 ### ipo project
@@ -30,7 +30,7 @@ npx leapcat@0.1.0 ipo projects --json
 Get detailed information about a specific IPO project.
 
 ```bash
-npx leapcat@0.1.0 ipo project --id <project-id> --json
+npx leapcat@0.1.1 ipo project --id <project-id> --json
 ```
 
 **Parameters:**
@@ -41,7 +41,7 @@ npx leapcat@0.1.0 ipo project --id <project-id> --json
 Estimate the cost of subscribing to an IPO with a given quantity.
 
 ```bash
-npx leapcat@0.1.0 ipo estimate --id <project-id> --quantity <shares> --json
+npx leapcat@0.1.1 ipo estimate --id <project-id> --quantity <shares> --json
 ```
 
 **Parameters:**
@@ -53,7 +53,7 @@ npx leapcat@0.1.0 ipo estimate --id <project-id> --quantity <shares> --json
 Submit an IPO subscription order.
 
 ```bash
-npx leapcat@0.1.0 ipo subscribe --id <project-id> --quantity <shares> --json
+npx leapcat@0.1.1 ipo subscribe --id <project-id> --quantity <shares> --json
 ```
 
 **Parameters:**
@@ -65,7 +65,7 @@ npx leapcat@0.1.0 ipo subscribe --id <project-id> --quantity <shares> --json
 Cancel a pending IPO subscription.
 
 ```bash
-npx leapcat@0.1.0 ipo cancel --subscription-id <id> --json
+npx leapcat@0.1.1 ipo cancel --subscription-id <id> --json
 ```
 
 **Parameters:**
@@ -76,7 +76,7 @@ npx leapcat@0.1.0 ipo cancel --subscription-id <id> --json
 List all of the user's IPO subscriptions.
 
 ```bash
-npx leapcat@0.1.0 ipo subscriptions --json
+npx leapcat@0.1.1 ipo subscriptions --json
 ```
 
 ### ipo subscription
@@ -84,7 +84,7 @@ npx leapcat@0.1.0 ipo subscriptions --json
 Get details of a specific IPO subscription.
 
 ```bash
-npx leapcat@0.1.0 ipo subscription --subscription-id <id> --json
+npx leapcat@0.1.1 ipo subscription --subscription-id <id> --json
 ```
 
 **Parameters:**

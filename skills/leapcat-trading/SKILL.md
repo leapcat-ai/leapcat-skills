@@ -10,8 +10,8 @@ Place, monitor, and cancel stock trading orders using the leapcat.
 
 ## Prerequisites
 
-- Node.js 18+ is required (commands use `npx leapcat@0.1.0` which auto-downloads the CLI)
-- User must be authenticated — run `npx leapcat@0.1.0 auth login --email <email>` first
+- Node.js 18+ is required (commands use `npx leapcat@0.1.1` which auto-downloads the CLI)
+- User must be authenticated — run `npx leapcat@0.1.1 auth login --email <email>` first
 - KYC must be completed and approved
 - Trade password must be set
 
@@ -22,7 +22,7 @@ Place, monitor, and cancel stock trading orders using the leapcat.
 Place a new stock order (buy or sell).
 
 ```bash
-npx leapcat@0.1.0 trading place-order \
+npx leapcat@0.1.1 trading place-order \
   --symbol <symbol> \
   --exchange <exchange> \
   --side <BUY|SELL> \
@@ -51,7 +51,7 @@ npx leapcat@0.1.0 trading place-order \
 List the user's orders with optional filters.
 
 ```bash
-npx leapcat@0.1.0 trading list-orders [--status <status>] [--symbol <symbol>] --json
+npx leapcat@0.1.1 trading list-orders [--status <status>] [--symbol <symbol>] --json
 ```
 
 **Parameters:**
@@ -63,7 +63,7 @@ npx leapcat@0.1.0 trading list-orders [--status <status>] [--symbol <symbol>] --
 Get details of a specific order.
 
 ```bash
-npx leapcat@0.1.0 trading get-order --order-id <id> --json
+npx leapcat@0.1.1 trading get-order --order-id <id> --json
 ```
 
 **Parameters:**
@@ -74,7 +74,7 @@ npx leapcat@0.1.0 trading get-order --order-id <id> --json
 Cancel a pending order.
 
 ```bash
-npx leapcat@0.1.0 trading cancel-order --order-id <id> --json
+npx leapcat@0.1.1 trading cancel-order --order-id <id> --json
 ```
 
 **Parameters:**
@@ -82,7 +82,7 @@ npx leapcat@0.1.0 trading cancel-order --order-id <id> --json
 
 ## Workflow
 
-1. **Get a market quote** — Use `npx leapcat@0.1.0 market quote --symbol <symbol> --exchange <exchange> --json` to check the current price.
+1. **Get a market quote** — Use `npx leapcat@0.1.1 market quote --symbol <symbol> --exchange <exchange> --json` to check the current price.
 2. **Place an order** — Run `trading place-order` with the desired parameters. For limit orders, set `--price` based on the quote data. Consider using `--idempotency-key` to avoid duplicate submissions.
 3. **Monitor order status** — Run `trading get-order --order-id <id> --json` or `trading list-orders --json` to track the order.
 4. **Cancel if needed** — Run `trading cancel-order --order-id <id> --json` to cancel a pending/unfilled order.

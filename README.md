@@ -7,7 +7,7 @@ wallet management, KYC verification, and market data.
 
 ### Prerequisites
 
-- Node.js 18+ (commands use `npx leapcat@0.1.0` which auto-downloads the CLI, no global install needed)
+- Node.js 18+ (commands use `npx leapcat@0.1.1` which auto-downloads the CLI, no global install needed)
 
 ### Add skills to your project
 
@@ -44,14 +44,14 @@ npx skills add leapcat-ai/leapcat-skills -g
 After installing skills, authenticate with your Leapcat account:
 
 ```bash
-npx leapcat@0.1.0 auth login --email your@email.com --send-only --json
-npx leapcat@0.1.0 auth login --email your@email.com --otp-id <id> --otp-code <code> --json
+npx leapcat@0.1.1 auth login --email your@email.com --send-only --json
+npx leapcat@0.1.1 auth login --email your@email.com --otp-id <id> --otp-code <code> --json
 ```
 
 Then try fetching a stock quote:
 
 ```bash
-npx leapcat@0.1.0 market quote --symbol 00700.HK --json
+npx leapcat@0.1.1 market quote --symbol 00700.HK --json
 ```
 
 ## Supported Agents

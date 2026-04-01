@@ -10,7 +10,7 @@ Access market data, stock quotes, K-line charts, indices, and platform configura
 
 ## Prerequisites
 
-- Node.js 18+ is required (commands use `npx leapcat@0.1.0` which auto-downloads the CLI)
+- Node.js 18+ is required (commands use `npx leapcat@0.1.1` which auto-downloads the CLI)
 - No authentication required for any command in this skill
 
 ## Commands
@@ -20,7 +20,7 @@ Access market data, stock quotes, K-line charts, indices, and platform configura
 Get the real-time quote for a specific stock.
 
 ```bash
-npx leapcat@0.1.0 market quote --symbol <symbol> --exchange <exchange> --json
+npx leapcat@0.1.1 market quote --symbol <symbol> --exchange <exchange> --json
 ```
 
 **Parameters:**
@@ -32,7 +32,7 @@ npx leapcat@0.1.0 market quote --symbol <symbol> --exchange <exchange> --json
 Get historical K-line (candlestick) data for a stock.
 
 ```bash
-npx leapcat@0.1.0 market kline --symbol <symbol> --exchange <exchange> --period <period> --json
+npx leapcat@0.1.1 market kline --symbol <symbol> --exchange <exchange> --period <period> --json
 ```
 
 **Parameters:**
@@ -45,7 +45,7 @@ npx leapcat@0.1.0 market kline --symbol <symbol> --exchange <exchange> --period 
 Get the latest K-line data point for a stock.
 
 ```bash
-npx leapcat@0.1.0 market kline-latest --symbol <symbol> --exchange <exchange> --period <period> --json
+npx leapcat@0.1.1 market kline-latest --symbol <symbol> --exchange <exchange> --period <period> --json
 ```
 
 **Parameters:**
@@ -58,7 +58,7 @@ npx leapcat@0.1.0 market kline-latest --symbol <symbol> --exchange <exchange> --
 Get detailed information about a specific stock (company info, sector, market cap, etc.).
 
 ```bash
-npx leapcat@0.1.0 market stock-detail --symbol <symbol> --exchange <exchange> --json
+npx leapcat@0.1.1 market stock-detail --symbol <symbol> --exchange <exchange> --json
 ```
 
 **Parameters:**
@@ -70,7 +70,7 @@ npx leapcat@0.1.0 market stock-detail --symbol <symbol> --exchange <exchange> --
 Get current market index data (e.g., S&P 500, Hang Seng, NASDAQ Composite).
 
 ```bash
-npx leapcat@0.1.0 market indices --json
+npx leapcat@0.1.1 market indices --json
 ```
 
 ### market overview
@@ -78,7 +78,7 @@ npx leapcat@0.1.0 market indices --json
 Get a general market overview including major market movements and summaries.
 
 ```bash
-npx leapcat@0.1.0 market overview --json
+npx leapcat@0.1.1 market overview --json
 ```
 
 ### market stocks
@@ -86,7 +86,7 @@ npx leapcat@0.1.0 market overview --json
 List available stocks, optionally filtered by exchange or keyword. Useful for searching stocks by name.
 
 ```bash
-npx leapcat@0.1.0 market stocks [--exchange <exchange>] [--keyword <search-term>] --json
+npx leapcat@0.1.1 market stocks [--exchange <exchange>] [--keyword <search-term>] --json
 ```
 
 **Parameters:**
@@ -98,7 +98,7 @@ npx leapcat@0.1.0 market stocks [--exchange <exchange>] [--keyword <search-term>
 Get current exchange rates used by the platform.
 
 ```bash
-npx leapcat@0.1.0 config exchange-rate --json
+npx leapcat@0.1.1 config exchange-rate --json
 ```
 
 ### config fee-rate
@@ -106,7 +106,7 @@ npx leapcat@0.1.0 config exchange-rate --json
 Get the platform's trading fee rate schedule.
 
 ```bash
-npx leapcat@0.1.0 config fee-rate --json
+npx leapcat@0.1.1 config fee-rate --json
 ```
 
 ### config withdrawal-fees
@@ -114,7 +114,7 @@ npx leapcat@0.1.0 config fee-rate --json
 Get the fee schedule for withdrawals.
 
 ```bash
-npx leapcat@0.1.0 config withdrawal-fees --json
+npx leapcat@0.1.1 config withdrawal-fees --json
 ```
 
 ## Workflow

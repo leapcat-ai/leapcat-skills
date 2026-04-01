@@ -10,8 +10,8 @@ View portfolio overview and stock positions using the leapcat. These are read-on
 
 ## Prerequisites
 
-- Node.js 18+ is required (commands use `npx leapcat@0.1.0` which auto-downloads the CLI)
-- User must be authenticated — run `npx leapcat@0.1.0 auth login --email <email>` first
+- Node.js 18+ is required (commands use `npx leapcat@0.1.1` which auto-downloads the CLI)
+- User must be authenticated — run `npx leapcat@0.1.1 auth login --email <email>` first
 
 ## Commands
 
@@ -20,7 +20,7 @@ View portfolio overview and stock positions using the leapcat. These are read-on
 Get a high-level summary of the user's portfolio including total value, profit/loss, and asset allocation.
 
 ```bash
-npx leapcat@0.1.0 portfolio overview --json
+npx leapcat@0.1.1 portfolio overview --json
 ```
 
 ### portfolio positions
@@ -28,7 +28,7 @@ npx leapcat@0.1.0 portfolio overview --json
 List all current stock positions with details such as symbol, quantity, average cost, current price, and unrealized P&L.
 
 ```bash
-npx leapcat@0.1.0 portfolio positions --json
+npx leapcat@0.1.1 portfolio positions --json
 ```
 
 ## Workflow

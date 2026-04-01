@@ -1,6 +1,7 @@
 ---
 name: leapcat-auth
 description: Manage user authentication for Leapcat. Handles login, logout, session management, token refresh, re-authentication, and trade password operations via the leapcat CLI.
+homepage: https://leapcat.ai
 ---
 
 # LeapCat Authentication Skill
@@ -9,7 +10,7 @@ Manage user authentication for the leapcat. Handles login, logout, session manag
 
 ## Prerequisites
 
-- Node.js 18+ is required (commands use `npx leapcat@latest` which auto-downloads the CLI)
+- Node.js 18+ is required (commands use `npx leapcat@0.1.0` which auto-downloads the CLI)
 - A valid email address registered with LeapCat
 
 ## Commands
@@ -19,7 +20,7 @@ Manage user authentication for the leapcat. Handles login, logout, session manag
 Step 1 — Send OTP to email:
 
 ```bash
-npx leapcat@latest auth login --email <email> --send-only --json
+npx leapcat@0.1.0 auth login --email <email> --send-only --json
 ```
 
 **Response:**
@@ -30,7 +31,7 @@ npx leapcat@latest auth login --email <email> --send-only --json
 Step 2 — Verify OTP and complete login:
 
 ```bash
-npx leapcat@latest auth login --email <email> --otp-id <otp-id> --otp-code <code> --json
+npx leapcat@0.1.0 auth login --email <email> --otp-id <otp-id> --otp-code <code> --json
 ```
 
 **Parameters:**
@@ -45,7 +46,7 @@ npx leapcat@latest auth login --email <email> --otp-id <otp-id> --otp-code <code
 End the current session and clear stored credentials.
 
 ```bash
-npx leapcat@latest auth logout --json
+npx leapcat@0.1.0 auth logout --json
 ```
 
 ### auth status
@@ -53,7 +54,7 @@ npx leapcat@latest auth logout --json
 Check if the user is currently authenticated and whether the token is still valid.
 
 ```bash
-npx leapcat@latest auth status --json
+npx leapcat@0.1.0 auth status --json
 ```
 
 ### auth refresh
@@ -61,7 +62,7 @@ npx leapcat@latest auth status --json
 Refresh the current authentication token before it expires.
 
 ```bash
-npx leapcat@latest auth refresh --json
+npx leapcat@0.1.0 auth refresh --json
 ```
 
 ### auth reauth
@@ -69,7 +70,7 @@ npx leapcat@latest auth refresh --json
 Perform a re-authentication to obtain an elevated session (e.g., for withdrawal operations that require a Turnkey session).
 
 ```bash
-npx leapcat@latest auth reauth --json
+npx leapcat@0.1.0 auth reauth --json
 ```
 
 ### auth trade-password set
@@ -77,7 +78,7 @@ npx leapcat@latest auth reauth --json
 Set the trade password for the first time. Required before placing orders or subscribing to IPOs.
 
 ```bash
-npx leapcat@latest auth trade-password set --json
+npx leapcat@0.1.0 auth trade-password set --json
 ```
 
 ### auth trade-password verify
@@ -85,7 +86,7 @@ npx leapcat@latest auth trade-password set --json
 Verify the trade password.
 
 ```bash
-npx leapcat@latest auth trade-password verify --json
+npx leapcat@0.1.0 auth trade-password verify --json
 ```
 
 ### auth trade-password reset
@@ -93,7 +94,7 @@ npx leapcat@latest auth trade-password verify --json
 Reset a forgotten trade password.
 
 ```bash
-npx leapcat@latest auth trade-password reset --json
+npx leapcat@0.1.0 auth trade-password reset --json
 ```
 
 ### auth trade-password status
@@ -101,7 +102,7 @@ npx leapcat@latest auth trade-password reset --json
 Check whether a trade password has been set.
 
 ```bash
-npx leapcat@latest auth trade-password status --json
+npx leapcat@0.1.0 auth trade-password status --json
 ```
 
 ## Workflow
